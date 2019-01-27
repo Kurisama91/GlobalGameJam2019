@@ -12,6 +12,7 @@ public class CameraController : MonoBehaviour
     {
         Vector3 focusingObjectPos = focusingObject.transform.position;
         focusingObjectPos.z = transform.position.z;
+        focusingObjectPos.y = transform.position.y;
         transform.position = focusingObjectPos;
     }
 
@@ -20,6 +21,7 @@ public class CameraController : MonoBehaviour
     {
         Vector3 focusingObjectPos = focusingObject.transform.position;
         focusingObjectPos.z = transform.position.z;
+        focusingObjectPos.y = transform.position.y;
         transform.position = Vector3.Lerp(transform.position, focusingObjectPos, followSpeed * Time.deltaTime);
     }
 }
